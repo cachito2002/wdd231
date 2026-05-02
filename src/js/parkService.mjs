@@ -178,6 +178,27 @@ const park = {
   name: "Yellowstone",
   designation: "National Park"
 };
+export const parkInfoLinks = [
+  {
+    name: "Current Conditions &#x203A;",
+    link: "conditions.html",
+    image: park.images[2].url,
+    description: "Check out the conditions you are expecting before arriving"
+  },
+  {
+    name: "Fees and Passes &#x203A;",
+    link: "fees.html",
+    image: park.images[3].url,
+    description: "Learn about the fees and passes that are available"
+  },
+  {
+    name: "Visitor Centers &#x203A;",
+    link: "visitor_centers.html",
+    image: park.images[9].url,
+    description: "Learn about the visitor centers in the park"
+  }
+];
+
 
 export function getParkData() {
   return park;

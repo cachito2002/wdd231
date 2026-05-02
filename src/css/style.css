@@ -312,3 +312,60 @@ body {
 .park-nav-bar svg {
   background-color: transparent;
 }
+
+
+.intro {
+  padding: 1em 2em;
+}
+
+.intro h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5em;
+}
+
+.intro p {
+  font-size: 1rem;
+  max-width: 800px;
+}
+
+
+.info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1em;
+  padding: 1em 2em;
+}
+
+.info section img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.info section h2 {
+  font-size: 1.1rem;
+  margin: 0.5em 0;
+}
+
+.info section p {
+  font-size: 0.9rem;
+  color: var(--bs-emperor);
+}
+
+
+#park-footer {
+  background-color: var(--bs-pampas);
+  padding: 2em;
+  margin-top: 2em;
+}
+
+#park-footer h3 {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 800px) {
+  .info {
+    grid-template-columns: 1fr;
+  }
+}
