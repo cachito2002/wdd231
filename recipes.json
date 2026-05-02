@@ -1,0 +1,164 @@
+[
+    {
+    "recipe_name": "Chocolate Chip Cookies",
+    "notes": "A classic cookie recipe",
+    "ingredients": [
+        {
+            "name": "Butter",
+            "amounts": {
+                "amount":"1",
+            "unit": "lb"
+            },
+            "notes":"softened"
+
+        },
+        {
+            "name": "Brown Sugar",
+            "amounts": {
+                "amount":"1 1/2",
+            "unit": "Cups"
+            }
+        },
+        {
+            "name": "White Sugar",
+            "amounts": {
+                "amount":"1",
+            "unit": "Cups"
+            }
+
+        },
+        {
+            "name": "Eggs",
+            "amounts": {
+                "amount":"3",
+            "unit": "each"
+            }
+
+        },
+        {
+            "name": "Vanilla",
+            "amounts": {
+                "amount":"2",
+            "unit": "Teaspoons"
+            }
+
+        },
+        {
+            "name": "Baking Soda",
+            "amounts": {
+                "amount":"1 1/2",
+            "unit": "Teaspoons"
+            }
+
+        },
+        {
+            "name": "Salt",
+            "amounts": {
+                "amount":"1/2",
+            "unit": "Teaspoons"
+            }
+
+        },{
+            "name": "Flour",
+            "amounts": {
+                "amount":"5",
+            "unit": "Cups"
+            },
+            "notes":"we like 3 cups white and 2 cups whole wheat"
+
+        },
+        {
+            "name": "Semi-Sweet Chocolate Chips",
+            "amounts": {
+                "amount":"2",
+            "unit": "Cups"
+            }
+
+        },
+        {
+            "name": "Shredded Coconut",
+            "amounts": {
+                "amount":"1-2",
+            "unit": "Cups"
+            }
+
+        }
+        ],
+        "steps": [
+            "1. Cream the butter and sugar together, then beat in the eggs and vanilla",
+            "2. Mix in salt, soda and flour",
+            "3. Add chocolate chips and coconut",
+            "4. Bake 8-10 minutes at 350 F"]
+
+    },
+    {
+    "recipe_name": "Banana Bread",
+    "notes": "A delicious banana bread recipe",
+    "ingredients": [
+        {
+            "name": "Bananas",
+            "amounts": {
+                "amount":"3",
+            "unit": "each"
+            },
+            "notes":"mashed and ripe"
+
+        },
+        {
+            "name": "White Sugar",
+            "amounts": {
+                "amount":"1",
+            "unit": "Cups"
+            }
+        },
+        {
+            "name": "Melted Butter",
+            "amounts": {
+                "amount":"1/4",
+            "unit": "Cup"
+            }
+
+        },
+        {
+            "name": "Eggs",
+            "amounts": {
+                "amount":"1",
+            "unit": "Each"
+            }
+
+        },
+        {
+            "name": "Baking Soda",
+            "amounts": {
+                "amount":"1",
+            "unit": "Teaspoons"
+            }
+
+        },
+        {
+            "name": "Salt",
+            "amounts": {
+                "amount":"1",
+            "unit": "Teaspoons"
+            }
+
+        },{
+            "name": "Flour",
+            "amounts": {
+                "amount":"1 1/2",
+            "unit": "Cups"
+            }
+
+        }
+    ],
+    "steps": [
+        "1. Gather all ingredients. Preheat the oven to 325 degrees F (165 degrees C). Grease a 9x5-inch loaf pan.",
+        "2. Combine bananas, sugar, butter, and egg in a bowl. Whisk flour and baking soda together in a separate bowl; stir into banana mixture until batter is just mixed.",
+        "3. Stir in salt; transfer batter to the prepared loaf pan.",
+        "4. Bake in the preheated oven until a toothpick inserted into the center comes out clean, about 1 hour.",
+        "5. Enjoy!"
+    ]
+
+}
+
+]
