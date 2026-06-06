@@ -14,14 +14,6 @@ function setParkInfo(data) {
   infoEl.innerHTML = html.join("");
 }
 
-async function init() {
-  const parkData = await getParkData();
-  const infoLinks = getInfoLinks(parkData.images);
-
-  setHeaderFooter(parkData);
-  setParkIntro(parkData);
-  setParkInfo(infoLinks);
-}
 function enableNavigation() {
   const menuButton = document.querySelector("#global-nav-toggle");
   const globalNav = document.querySelector(".global-nav");
@@ -47,7 +39,7 @@ async function init() {
   setHeaderFooter(parkData);
   setParkIntro(parkData);
   setParkInfo(infoLinks);
-
-  enableNavigation(); 
+  enableNavigation();
 }
+
 init();
