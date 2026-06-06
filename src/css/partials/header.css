@@ -169,3 +169,27 @@
 .park-nav-bar svg {
   background-color: transparent;
 }
+
+.global-nav {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.global-nav.open {
+  max-height: 300px;
+}
+
+.global-nav__toggle--open {
+  display: none;
+}
+
+.global-nav__toggle[aria-expanded="true"] > .global-nav__toggle--open {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.global-nav__toggle[aria-expanded="true"] > .global-nav__toggle--closed {
+  display: none;
+}

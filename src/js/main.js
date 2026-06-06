@@ -22,5 +22,32 @@ async function init() {
   setParkIntro(parkData);
   setParkInfo(infoLinks);
 }
+function enableNavigation() {
+  const menuButton = document.querySelector("#global-nav-toggle");
+  const globalNav = document.querySelector(".global-nav");
 
+  menuButton.addEventListener("click", (ev) => {
+    globalNav.classList.toggle("open");
+
+    let button = ev.target;
+    if (button.tagName !== "BUTTON") {
+      button = button.closest("button");
+    }
+
+    const isOpen = globalNav.classList.contains("open");
+    button.setAttribute("aria-expanded", isOpen);
+    button.setAttribute("aria-label", isOpen ? "Close Menu" : "Open Menu");
+  });
+}
+
+async function init() {
+  const parkData = await getParkData();
+  const infoLinks = getInfoLinks(parkData.images);
+
+  setHeaderFooter(parkData);
+  setParkIntro(parkData);
+  setParkInfo(infoLinks);
+
+  enableNavigation(); 
+}
 init();
