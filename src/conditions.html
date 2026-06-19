@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>[Park Name]</title>
-     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/partials/conditions.css" />
     <script type="module" src="js/conditions.js"></script>
+    <script type="module" src="js/nav.js"></script>
   </head>
   <body>
     <p class="disclaimer">
@@ -43,11 +44,24 @@
             </svg>
             <span class="visually-hidden">Search</span>
           </a>
-          <button id="global-nav-toggle">
-            <svg class="icon">
-              <use xlink:href="/images/sprite.symbol.svg#menu"></use>
-            </svg>
-            <span class="visually-hidden">Open</span> Menu
+          <button
+            id="global-nav-toggle"
+            class="global-nav__toggle"
+            aria-expanded="false"
+            aria-label="Open Menu"
+          >
+            <div class="global-nav__toggle--closed">
+              <svg class="icon">
+                <use xlink:href="/images/sprite.symbol.svg#menu"></use>
+              </svg>
+              <span class="visually-hidden">Open</span> Menu
+            </div>
+            <div class="global-nav__toggle--open">
+              <svg class="icon">
+                <use xlink:href="/images/sprite.symbol.svg#close"></use>
+              </svg>
+              Close
+            </div>
           </button>
         </div>
       </section>
@@ -64,6 +78,8 @@
         </div>
         <div class="park-nav-bar">
           <nav class="global-nav">
+
+            <h2 class="global-nav__section-heading">Explore this Park</h2>
             <ul class="global-nav__list">
               <li>
                 <div class="global-nav__split-button">
@@ -99,7 +115,85 @@
                 </div>
               </li>
             </ul>
+
+            <h2 class="global-nav__section-heading">Explore the National Park Service</h2>
+            <ul class="global-nav__list">
+
+              <li>
+                <div class="global-nav__split-button">
+                  <a href="#">Find a Park</a>
+                  <button class="global-nav__split-button__toggle">
+                    <span class="visually-hidden">Toggle submenu for Find a Park</span>
+                    <svg class="icon" role="presentation" focusable="false">
+                      <use xlink:href="/images/sprite.symbol.svg#arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+                <ul class="global-nav__submenu" aria-label="Find a Park submenu">
+                  <li><a href="#">Find a Park</a></li>
+                  <li><a href="#">National Parks</a></li>
+                  <li><a href="#">National Monuments</a></li>
+                  <li><a href="#">National Historic Sites</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <div class="global-nav__split-button">
+                  <a href="#">Plan Your Visit</a>
+                  <button class="global-nav__split-button__toggle">
+                    <span class="visually-hidden">Toggle submenu for Plan Your Visit</span>
+                    <svg class="icon" role="presentation" focusable="false">
+                      <use xlink:href="/images/sprite.symbol.svg#arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+                <ul class="global-nav__submenu" aria-label="Plan Your Visit submenu">
+                  <li><a href="#">Events</a></li>
+                  <li><a href="#">America the Beautiful Passes</a></li>
+                  <li><a href="#">Trip Ideas</a></li>
+                  <li><a href="#">Camping</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <div class="global-nav__split-button">
+                  <a href="#">Learn &amp; Explore</a>
+                  <button class="global-nav__split-button__toggle">
+                    <span class="visually-hidden">Toggle submenu for Learn and Explore</span>
+                    <svg class="icon" role="presentation" focusable="false">
+                      <use xlink:href="/images/sprite.symbol.svg#arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+                <ul class="global-nav__submenu" aria-label="Learn and Explore submenu">
+                  <li><a href="#">Articles</a></li>
+                  <li><a href="#">Photos &amp; Multimedia</a></li>
+                  <li><a href="#">History &amp; Culture</a></li>
+                  <li><a href="#">Nature &amp; Science</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <div class="global-nav__split-button">
+                  <a href="#">Get Involved</a>
+                  <button class="global-nav__split-button__toggle">
+                    <span class="visually-hidden">Toggle submenu for Get Involved</span>
+                    <svg class="icon" role="presentation" focusable="false">
+                      <use xlink:href="/images/sprite.symbol.svg#arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+                <ul class="global-nav__submenu" aria-label="Get Involved submenu">
+                  <li><a href="#">Volunteer</a></li>
+                  <li><a href="#">Donate</a></li>
+                  <li><a href="#">Junior Ranger Program</a></li>
+                  <li><a href="#">Partnerships</a></li>
+                </ul>
+              </li>
+
+            </ul>
           </nav>
+
           <nav class="park-nav">
             <ul>
               <li>
@@ -153,13 +247,13 @@
         <ul class="alert-list"></ul>
       </section>
 
-        <section id="visitor-services">
+      <section id="visitor-services">
         <h2>Visitor Services</h2>
         <details name="conditions">
-            <summary>Visitor Centers</summary>
-            <div class="visitor-center-list"></div>
+          <summary>Visitor Centers</summary>
+          <div class="visitor-center-list"></div>
         </details>
-        </section>
+      </section>
 
       <section id="activities">
         <h2>Activities</h2>
