@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>[Park Name]</title>
+    <title>[Visitor Center Name]</title>
     <link rel="stylesheet" href="css/style.css" />
-    <script type="module" src="js/main.js"></script>
+    <link rel="stylesheet" href="css/partials/visitor_center.css" />
+    <script type="module" src="js/visitor_center.js"></script>
   </head>
   <body>
     <p class="disclaimer">
@@ -16,20 +17,16 @@
     <div class="skip-links" aria-label="short-cut links" role="navigation">
       <ul>
         <li>
-          <a href="#global-nav-toggle" aria-label="Skip to global NPS navigation"
-            >Skip to global NPS navigation</a>
+          <a href="#global-nav-toggle" aria-label="Skip to global NPS navigation">Skip to global NPS navigation</a>
         </li>
         <li>
-          <a href="#local-nav" aria-label="Skip to this park navigation"
-            >Skip to this park navigation</a>
+          <a href="#local-nav" aria-label="Skip to this park navigation">Skip to this park navigation</a>
         </li>
         <li>
-          <a href="#main" aria-label="Skip to the main content"
-            >Skip to the main content</a>
+          <a href="#main" aria-label="Skip to the main content">Skip to the main content</a>
         </li>
         <li>
-          <a href="#park-footer" aria-label="Skip to this park information section"
-            >Skip to this park information section</a>
+          <a href="#park-footer" aria-label="Skip to this park information section">Skip to this park information section</a>
         </li>
       </ul>
     </div>
@@ -69,10 +66,7 @@
       </section>
       <section id="park-header">
         <div class="hero-banner">
-          <img
-            src="https://www.nps.gov/common/uploads/structured_data/3C7D5920-1DD8-B71B-0B83F012ED802CEA.jpg"
-            alt="picture from Yellowstone"
-          />
+          <img src="https://www.nps.gov/common/uploads/structured_data/3C7D5920-1DD8-B71B-0B83F012ED802CEA.jpg" alt="picture from Yellowstone">
           <div class="hero-banner__content">
             <a href="#" class="hero-banner__title">Yellowstone</a>
             <p class="hero-banner__subtitle">
@@ -84,7 +78,6 @@
         <div class="park-nav-bar">
           <nav class="global-nav">
 
-            
             <h2 class="global-nav__section-heading">Explore this Park</h2>
             <ul class="global-nav__list">
               <li>
@@ -203,7 +196,7 @@
           <nav class="park-nav">
             <ul>
               <li>
-                <a href="#">
+                <a href="conditions.html">
                   <span>Info</span>
                   <svg class="icon" role="presentation" focusable="false">
                     <use xlink:href="/images/sprite.symbol.svg#info"></use>
@@ -211,7 +204,7 @@
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="conditions.html">
                   <span>Alerts</span>
                   <svg class="icon" role="presentation" focusable="false">
                     <use xlink:href="/images/sprite.symbol.svg#alert"></use>
@@ -248,8 +241,72 @@
       </section>
     </header>
     <main id="main">
-      <section class="intro"></section>
-      <section class="info"></section>
+      <h1 id="vc-title-heading">
+        <svg class="icon" role="presentation" focusable="false">
+          <use xlink:href="/images/sprite.symbol.svg#ranger-station"></use>
+        </svg>
+        <span id="vc-title"></span>
+      </h1>
+
+      <section class="vc-info">
+        <figure class="vc-image">
+          <img id="vc-info-image" src="" alt="" />
+          <figcaption id="vc-info-caption"></figcaption>
+        </figure>
+        <p id="vc-info-description"></p>
+      </section>
+
+      <section class="vc-details">
+        <details name="vc-details" id="vcAddresses">
+          <summary>
+            <svg class="icon" role="presentation" focusable="false">
+              <use xlink:href="/images/sprite.symbol.svg#heading-icon_map-pin"></use>
+            </svg>
+            Addresses
+          </summary>
+          <div class="vc-addresses"></div>
+        </details>
+
+        <details name="vc-details" id="vcDirections">
+          <summary>
+            <svg class="icon" role="presentation" focusable="false">
+              <use xlink:href="/images/sprite.symbol.svg#directions"></use>
+            </svg>
+            Directions
+          </summary>
+          <p class="vc-directions"></p>
+        </details>
+
+        <details name="vc-details" id="vcAmenities">
+          <summary>
+            <svg class="icon" role="presentation" focusable="false">
+              <use xlink:href="/images/sprite.symbol.svg#heading-icon_info"></use>
+            </svg>
+            Amenities
+          </summary>
+          <ul class="vc-amenities"></ul>
+        </details>
+
+        <details name="vc-details" id="vcContact">
+          <summary>
+            <svg class="icon" role="presentation" focusable="false">
+              <use xlink:href="/images/sprite.symbol.svg#phone"></use>
+            </svg>
+            Contact Information
+          </summary>
+          <div class="vc-contact"></div>
+        </details>
+      </section>
+
+      <section class="vc-gallery">
+        <h2>
+          <svg class="icon" role="presentation" focusable="false">
+            <use xlink:href="/images/sprite.symbol.svg#camera-alt"></use>
+          </svg>
+          Image Gallery
+        </h2>
+        <ul></ul>
+      </section>
     </main>
     <footer id="park-footer"></footer>
   </body>

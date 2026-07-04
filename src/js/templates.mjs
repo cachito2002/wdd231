@@ -56,7 +56,7 @@ export function alertTemplate(alert) {
 
 export function visitorCenterTemplate(center) {
   return `<div class="visitor-center">
-    <h3>${center.name}</h3>
+    <h3><a href="visitor_center.html?id=${center.id}">${center.name}</a></h3>
     <p>${center.description}</p>
     <p>${center.directionsInfo}</p>
   </div>`;
@@ -64,4 +64,36 @@ export function visitorCenterTemplate(center) {
 
 export function activityTemplate(activity) {
   return `<li>${activity.name}</li>`;
+}
+
+export function listTemplate(data, contentTemplate) {
+  const html = data.map(contentTemplate);
+  return `<ul>${html.join("")}</ul>`;
+}
+
+export function vcImageTemplate(image) {
+  return `<li><img src="${image.url}" alt="${image.altText}"></li>`;
+}
+
+export function vcAmenityTemplate(amenity) {
+  return `<li>${amenity}</li>`;
+}
+
+export function vcAddressTemplate(address) {
+  return `<li class="vc-address">
+    <h3>${address.type} Address</h3>
+    <p>${address.line1}</p>
+    ${address.line2 ? `<p>${address.line2}</p>` : ""}
+    <p>${address.city}, ${address.stateCode} ${address.postalCode}</p>
+  </li>`;
+}
+
+export function vcContactTemplate(center) {
+  const email = center.contacts?.emailAddresses?.[0];
+  const phone = center.contacts?.phoneNumbers?.[0];
+
+  return `
+    ${email ? `<p>Email: <a href="mailto:${email.emailAddress}">${email.emailAddress}</a></p>` : ""}
+    ${phone ? `<p>Phone: ${phone.phoneNumber}</p>` : ""}
+  `;
 }

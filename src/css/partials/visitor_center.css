@@ -1,0 +1,192 @@
+#main {
+  padding: 1em 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* title */
+#vc-title-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0.5em 0 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid var(--bs-grey-3);
+}
+
+#vc-title-heading .icon {
+  width: 1.1em;
+  height: 1.1em;
+}
+
+/* general info: full-width image, caption, then description */
+.vc-info {
+  margin-bottom: 1.5em;
+}
+
+.vc-image {
+  margin: 0 0 0.5em;
+}
+
+.vc-image img {
+  display: block;
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+}
+
+.vc-image figcaption {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--bs-grey-2);
+  margin-top: 0.4em;
+}
+
+.vc-image figcaption .credit {
+  display: block;
+  font-size: 0.7rem;
+  font-style: normal;
+}
+
+.vc-info p {
+  margin-top: 1em;
+  line-height: 1.5;
+}
+
+/* accordions styled as stacked rows with chevrons, like the official page */
+.vc-details {
+  border-top: 1px solid var(--bs-grey-3);
+  margin-bottom: 2em;
+}
+
+.vc-details details {
+  border: none;
+  border-bottom: 1px solid var(--bs-grey-3);
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.vc-details summary {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  padding: 0.9em 0.25em;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  list-style: none;
+}
+
+.vc-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.vc-details summary::marker {
+  content: "";
+}
+
+.vc-details summary .icon {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
+
+/* chevron built from a rotated border, replacing the default triangle */
+.vc-details summary::after {
+  content: "";
+  margin-left: auto;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--bs-grey-2);
+  border-bottom: 2px solid var(--bs-grey-2);
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+}
+
+.vc-details details[open] summary::after {
+  transform: rotate(225deg);
+}
+
+.vc-details details > *:not(summary) {
+  padding: 0 0.25em 1.25em;
+}
+
+/* addresses stack vertically, italic body text like the mockup */
+.vc-addresses {
+  list-style: none;
+  margin: 0;
+  padding: 0 0.25em 1.25em;
+}
+
+.vc-address {
+  margin-bottom: 1.25em;
+}
+
+.vc-address:last-child {
+  margin-bottom: 0;
+}
+
+.vc-address h3 {
+  margin: 0 0 0.4em;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.vc-address p {
+  margin: 0;
+  font-style: italic;
+  color: var(--bs-grey-2);
+  line-height: 1.4;
+}
+
+.vc-amenities {
+  list-style: disc;
+  padding: 0 0.25em 1.25em 1.75em;
+}
+
+.vc-contact p {
+  margin: 0 0 0.5em;
+}
+
+/* image gallery */
+.vc-gallery h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.vc-gallery h2 .icon {
+  width: 1.1em;
+  height: 1.1em;
+}
+
+.vc-gallery ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+}
+
+.vc-gallery li img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .vc-gallery ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

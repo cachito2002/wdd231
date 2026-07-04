@@ -37,7 +37,7 @@ export function getInfoLinks(images) {
     },
     {
       name: "Visitor Centers &#x203A;",
-      link: "visitor_centers.html",
+      link: "visitor_center.html",
       image: images[9].url,
       description: "Learn about the visitor centers in the park"
     }
@@ -50,4 +50,8 @@ export async function getAlertData(parkCode) {
 
 export async function getVisitorCenterData(parkCode) {
   return await getJson(`visitorcenters?parkCode=${parkCode}`);
+}
+
+export async function getParkVisitorCenterDetails(id) {
+  return await getJson(`visitorcenters?id=${id}`);
 }
